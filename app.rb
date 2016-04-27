@@ -29,7 +29,7 @@ post '/linebot/callback' do
 
     RestClient.proxy = ENV['FIXIE_URL']
     RestClient.post(endpoint_uri, content_json, {
-      'Content-Type' => 'application/json: charset=UTF-8',
+      'Content-Type' => 'application/json; charset=UTF-8',
       'X-Line-ChannelID' => ENV['LINE_CHANNEL_ID'],
       'X-Line-ChannelSecret' => ENV['LINE_CHANNEL_SECRET'],
       'X-Line-Trusted-User-With-ACL' => ENV['LINE_CHANNEL_MID']
