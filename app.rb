@@ -9,7 +9,7 @@ get '/' do
   'under construction'
 end
 
-post '/linebot/callbacK' do
+post '/linebot/callback' do
   params = JSON.parse(request.body.read)
 
   params['result'].each do |msg|
